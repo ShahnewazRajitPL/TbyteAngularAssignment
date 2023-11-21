@@ -1,0 +1,10 @@
+<div *ngIf="student">
+
+    <h4>Student ID: {{student?.id}}</h4>
+
+    <h3>Student Name: {{student?.name}}</h3>
+
+    <input type="text" [(ngModel)] ="student.description">
+    <button (click)="updateStudent(student)">Update Student</button>
+
+</div>

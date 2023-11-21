@@ -1,0 +1,11 @@
+<p>Below is child component!</p>
+
+<app-child  *ngFor="let item of villians"
+[villian]="item"
+[heroName]="hero"
+(killVillian)=" polyKilled($event)"
+
+>
+
+
+</app-child>

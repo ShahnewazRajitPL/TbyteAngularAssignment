@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let route of navRouter">
+        <a routerLinkActive="is-activ" [routerLink]="route.routerName">{{route.displayName}}</a>
+        
+    </li>
+</ul>
