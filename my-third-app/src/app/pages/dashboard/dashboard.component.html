@@ -1,0 +1,29 @@
+
+<div class="main-villian">
+    <h2>Students</h2>
+
+<div>
+  <label for="new-villian">Student Name: </label>
+  <input type="text" id="new-villian" #studentName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" 
+  class="add-button" 
+  (click)="addStudent(studentName.value); studentName.value=''">
+    Add Villian
+  </button>
+</div>
+
+<ul class="heroes">
+  <li *ngFor="let item of students">
+    <!--<a (click)="navigateStudent(item.id)" routerLink="/detail/{{item.id}}">-->
+        <a (click)="navigateStudent(item.id)" >
+      <span class="badge">{{item.id}}</span> {{item.name}}
+    </a>
+    <button type="button" class="delete" title="delete hero"
+      (click)="removeStudents(item )">x</button>
+  </li>
+</ul>
+
+
+</div>
